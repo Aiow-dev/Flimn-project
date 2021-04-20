@@ -27,6 +27,7 @@ namespace Flimncourse {
 			DateTime^ time = gcnew DateTime();
 			DateTime^ time1 = gcnew DateTime();
 			time1 = time->Now;
+			MessageBox::Show("Test2");
 			int hour = time1->Hour;
 			fstream theme_file;
 			theme_file.open("state_theme.txt");
