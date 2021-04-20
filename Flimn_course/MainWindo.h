@@ -28,6 +28,8 @@ namespace Flimncourse {
 			DateTime^ time1 = gcnew DateTime();
 			time1 = time->Now;
 			MessageBox::Show("Test2");
+			MessageBox::Show("Test3");
+			MessageBox::Show("Test4");
 			int hour = time1->Hour;
 			fstream theme_file;
 			theme_file.open("state_theme.txt");
