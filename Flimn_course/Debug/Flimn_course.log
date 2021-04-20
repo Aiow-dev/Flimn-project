@@ -1,0 +1,6 @@
+﻿  MainWindo.cpp
+C:\Users\ilyat\Flimn(C++)\Assemblies\18 Restore\Flimn_course\Flimn_course\MainWindo.cpp(5,33): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+  Settings_win.cpp
+  Создание кода...
+  MainWindo.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Flimn_course.vcxproj -> C:\Users\ilyat\Flimn(C++)\Assemblies\18 Restore\Flimn_course\Debug\Flimn_course.exe
