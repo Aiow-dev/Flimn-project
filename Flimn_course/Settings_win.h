@@ -219,6 +219,7 @@ namespace Flimncourse {
 			this->label27->Size = System::Drawing::Size(81, 24);
 			this->label27->TabIndex = 12;
 			this->label27->Text = L"Справка";
+			this->label27->Click += gcnew System::EventHandler(this, &Settings_win::label27_Click);
 			// 
 			// label16
 			// 
@@ -933,6 +934,21 @@ private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e)
 	String^ font_foldernote = L"Times New Roman";
 	this->label28->Font = (gcnew System::Drawing::Font(font_foldernote, 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 		static_cast<System::Byte>(204)));
+}
+private: System::Void label27_Click(System::Object^ sender, System::EventArgs^ e) {
+	richTextBox1->Visible = true;
+	richTextBox2->Visible = false;
+	label15->Visible = false;
+	label14->Visible = false;
+	label17->Visible = false;
+	checkBox1->Visible = false;
+	label18->Visible = false;
+	label19->Visible = false;
+	label20->Visible = false;
+	label21->Visible = false;
+	label22->Visible = false;
+	label23->Visible = false;
+	label24->Visible = false;
 }
 };
 }
