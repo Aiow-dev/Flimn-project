@@ -126,10 +126,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Load_screen.cpp" />
     <ClCompile Include="MainWindo.cpp" />
     <ClCompile Include="Settings_win.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Load_screen.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MainWindo.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -138,6 +142,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Load_screen.resx">
+      <DependentUpon>Load_screen.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindo.resx">
       <DependentUpon>MainWindo.h</DependentUpon>
     </EmbeddedResource>

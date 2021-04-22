@@ -2,3 +2,4 @@ C:\Users\ilyat\Flimn(C++)\Assemblies\18 Restore\Flimn_course\Flimn_course\Debug\
 C:\Users\ilyat\Flimn(C++)\Assemblies\18 Restore\Flimn_course\Flimn_course\Debug\Flimncourse.MainWindo.resources
 C:\Users\ilyat\Flimn(C++)\Assemblies\18 Restore\Flimn_course\Flimn_course\Debug\Flimn_course.vcxproj.GenerateResource.cache
 C:\Users\ilyat\Flimn(C++)\Assemblies\18 Restore\Flimn_course\Flimn_course\Debug\Flimncourse.Settings_win.resources
+C:\Users\ilyat\Flimn(C++)\Assemblies\18 Restore\Flimn_course\Flimn_course\Debug\Flimncourse.Load_screen.resources

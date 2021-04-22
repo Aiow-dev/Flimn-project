@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include "Settings_win.h"
+#include "Load_screen.h"
 namespace Flimncourse {
 	using namespace std;
 	using namespace System;
@@ -27,9 +28,10 @@ namespace Flimncourse {
 			DateTime^ time = gcnew DateTime();
 			DateTime^ time1 = gcnew DateTime();
 			time1 = time->Now;
-			MessageBox::Show("Test2");
-			MessageBox::Show("Test3");
-			MessageBox::Show("Test4");
+			timer1->Start();
+			WindowState = FormWindowState::Minimized;
+			Load_screen^ newform = gcnew Load_screen();
+			newform->Show();
 			int hour = time1->Hour;
 			fstream theme_file;
 			theme_file.open("state_theme.txt");
@@ -207,6 +209,9 @@ private: System::Windows::Forms::Label^ button_maximizewindow;
 
 
 private: System::Windows::Forms::Label^ setting_button_offpanelinstruments;
+private: System::Windows::Forms::Timer^ timer1;
+
+private: System::ComponentModel::IContainer^ components;
 
 
 
@@ -216,7 +221,7 @@ private: System::Windows::Forms::Label^ setting_button_offpanelinstruments;
 		/// <summary>
 		/// Обязательная переменная конструктора.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -225,6 +230,7 @@ private: System::Windows::Forms::Label^ setting_button_offpanelinstruments;
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->panel_notes = (gcnew System::Windows::Forms::Panel());
 			this->button_hidepanel = (gcnew System::Windows::Forms::Label());
 			this->username_folder = (gcnew System::Windows::Forms::Label());
@@ -250,6 +256,7 @@ private: System::Windows::Forms::Label^ setting_button_offpanelinstruments;
 			this->button_restore_hidepanel = (gcnew System::Windows::Forms::Label());
 			this->colorDialog1 = (gcnew System::Windows::Forms::ColorDialog());
 			this->setting_button_offpanelinstruments = (gcnew System::Windows::Forms::Label());
+			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->panel_notes->SuspendLayout();
 			this->panel_instruments->SuspendLayout();
 			this->SuspendLayout();
@@ -571,6 +578,11 @@ private: System::Windows::Forms::Label^ setting_button_offpanelinstruments;
 			this->setting_button_offpanelinstruments->Visible = false;
 			this->setting_button_offpanelinstruments->Click += gcnew System::EventHandler(this, &MainWindo::setting_button_offpanelinstruments_Click);
 			// 
+			// timer1
+			// 
+			this->timer1->Interval = 8000;
+			this->timer1->Tick += gcnew System::EventHandler(this, &MainWindo::timer1_Tick);
+			// 
 			// MainWindo
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 29);
@@ -843,5 +855,11 @@ private: System::Void setting_button_offpanelinstruments_Click(System::Object^ s
 	Settings_win^ setting_form = gcnew Settings_win();
 	setting_form->Show();
 }
+private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
+	WindowState = FormWindowState::Normal;
+	/*this->Height = 600;
+	this->Width = 1400;*/
+	timer1->Stop();
+	}
 };
 }
