@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 #include <random>
 #include <time.h>
@@ -11,7 +11,7 @@ namespace Flimncourse {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	/// <summary>
-	/// Сводка для Load_screen
+	/// РЎРІРѕРґРєР° РґР»СЏ Load_screen
 	/// </summary>
 	public ref class Load_screen : public System::Windows::Forms::Form
 	{
@@ -21,49 +21,49 @@ namespace Flimncourse {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 			this->Location = System::Drawing::Point(300, 300);
 			string advice;
 			srand(time(NULL));
 			int key_advice = 1 + rand() % 11;
 			if (key_advice == 1) {
-				label2->Text = "Совет: Хотите изменить тему приложения? Вы можете это сделать на панели инструментов или в настройках";
+				label2->Text = "РЎРѕРІРµС‚: РҐРѕС‚РёС‚Рµ РёР·РјРµРЅРёС‚СЊ С‚РµРјСѓ РїСЂРёР»РѕР¶РµРЅРёСЏ? Р’С‹ РјРѕР¶РµС‚Рµ СЌС‚Рѕ СЃРґРµР»Р°С‚СЊ РЅР° РїР°РЅРµР»Рё РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ РёР»Рё РІ РЅР°СЃС‚СЂРѕР№РєР°С…";
 			}
 			if (key_advice == 2) {
-				label2->Text = "Совет: Вы можете настроить множество параметров элементов интерфейса в Flimn в настройках (например, выключить поиск)";
+				label2->Text = "РЎРѕРІРµС‚: Р’С‹ РјРѕР¶РµС‚Рµ РЅР°СЃС‚СЂРѕРёС‚СЊ РјРЅРѕР¶РµСЃС‚РІРѕ РїР°СЂР°РјРµС‚СЂРѕРІ СЌР»РµРјРµРЅС‚РѕРІ РёРЅС‚РµСЂС„РµР№СЃР° РІ Flimn РІ РЅР°СЃС‚СЂРѕР№РєР°С… (РЅР°РїСЂРёРјРµСЂ, РІС‹РєР»СЋС‡РёС‚СЊ РїРѕРёСЃРє)";
 			}
 			if (key_advice == 3) {
-				label2->Text = "Совет: Хотите быстрее искать информацию? После ввода данных нажмите Enter, после чего начнется поиск";
+				label2->Text = "РЎРѕРІРµС‚: РҐРѕС‚РёС‚Рµ Р±С‹СЃС‚СЂРµРµ РёСЃРєР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ? РџРѕСЃР»Рµ РІРІРѕРґР° РґР°РЅРЅС‹С… РЅР°Р¶РјРёС‚Рµ Enter, РїРѕСЃР»Рµ С‡РµРіРѕ РЅР°С‡РЅРµС‚СЃСЏ РїРѕРёСЃРє";
 			}
 			if (key_advice == 4) {
-				label2->Text = "Совет: Flimn всегда будет знать как вас поприветствовать. Просто зайдите в приложение и Flimn сделает это";
+				label2->Text = "РЎРѕРІРµС‚: Flimn РІСЃРµРіРґР° Р±СѓРґРµС‚ Р·РЅР°С‚СЊ РєР°Рє РІР°СЃ РїРѕРїСЂРёРІРµС‚СЃС‚РІРѕРІР°С‚СЊ. РџСЂРѕСЃС‚Рѕ Р·Р°Р№РґРёС‚Рµ РІ РїСЂРёР»РѕР¶РµРЅРёРµ Рё Flimn СЃРґРµР»Р°РµС‚ СЌС‚Рѕ";
 			}
 			if (key_advice == 5) {
-				label2->Text = "Совет: Экспериментируйте вместе с Flimn: многие кнопки или будь то другие элементы интерфейса имеют множество функций (раскрывайте их потенциал, используя, например, клик или двойной клик)";
+				label2->Text = "РЎРѕРІРµС‚: Р­РєСЃРїРµСЂРёРјРµРЅС‚РёСЂСѓР№С‚Рµ РІРјРµСЃС‚Рµ СЃ Flimn: РјРЅРѕРіРёРµ РєРЅРѕРїРєРё РёР»Рё Р±СѓРґСЊ С‚Рѕ РґСЂСѓРіРёРµ СЌР»РµРјРµРЅС‚С‹ РёРЅС‚РµСЂС„РµР№СЃР° РёРјРµСЋС‚ РјРЅРѕР¶РµСЃС‚РІРѕ С„СѓРЅРєС†РёР№ (СЂР°СЃРєСЂС‹РІР°Р№С‚Рµ РёС… РїРѕС‚РµРЅС†РёР°Р», РёСЃРїРѕР»СЊР·СѓСЏ, РЅР°РїСЂРёРјРµСЂ, РєР»РёРє РёР»Рё РґРІРѕР№РЅРѕР№ РєР»РёРє)";
 			}
 			if (key_advice == 6) {
-				label2->Text = "Совет: Если у Вас не получается найти нужную информацию, попробуйте задать поиску правильный регистр";
+				label2->Text = "РЎРѕРІРµС‚: Р•СЃР»Рё Сѓ Р’Р°СЃ РЅРµ РїРѕР»СѓС‡Р°РµС‚СЃСЏ РЅР°Р№С‚Рё РЅСѓР¶РЅСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ, РїРѕРїСЂРѕР±СѓР№С‚Рµ Р·Р°РґР°С‚СЊ РїРѕРёСЃРєСѓ РїСЂР°РІРёР»СЊРЅС‹Р№ СЂРµРіРёСЃС‚СЂ";
 			}
 			if (key_advice == 7) {
-				label2->Text = "Совет: В Flimn продуманная система заметок. У вас не получится искать что-либо в заметках, если они не открыты";
+				label2->Text = "РЎРѕРІРµС‚: Р’ Flimn РїСЂРѕРґСѓРјР°РЅРЅР°СЏ СЃРёСЃС‚РµРјР° Р·Р°РјРµС‚РѕРє. РЈ РІР°СЃ РЅРµ РїРѕР»СѓС‡РёС‚СЃСЏ РёСЃРєР°С‚СЊ С‡С‚Рѕ-Р»РёР±Рѕ РІ Р·Р°РјРµС‚РєР°С…, РµСЃР»Рё РѕРЅРё РЅРµ РѕС‚РєСЂС‹С‚С‹";
 			}
 			if (key_advice == 8) {
-				label2->Text = "Совет: Панель недавних заметок расположена в левой части приложения. Панель отображает все созданные или редактированные заметки в относительно недавнее время";
+				label2->Text = "РЎРѕРІРµС‚: РџР°РЅРµР»СЊ РЅРµРґР°РІРЅРёС… Р·Р°РјРµС‚РѕРє СЂР°СЃРїРѕР»РѕР¶РµРЅР° РІ Р»РµРІРѕР№ С‡Р°СЃС‚Рё РїСЂРёР»РѕР¶РµРЅРёСЏ. РџР°РЅРµР»СЊ РѕС‚РѕР±СЂР°Р¶Р°РµС‚ РІСЃРµ СЃРѕР·РґР°РЅРЅС‹Рµ РёР»Рё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРЅС‹Рµ Р·Р°РјРµС‚РєРё РІ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РЅРµРґР°РІРЅРµРµ РІСЂРµРјСЏ";
 			}
 			if (key_advice == 9) {
-				label2->Text = "Совет: Хотите удалить заметку? Нажмите кнопку корзины в панели инструментов";
+				label2->Text = "РЎРѕРІРµС‚: РҐРѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ Р·Р°РјРµС‚РєСѓ? РќР°Р¶РјРёС‚Рµ РєРЅРѕРїРєСѓ РєРѕСЂР·РёРЅС‹ РІ РїР°РЅРµР»Рё РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ";
 			}
 			if (key_advice == 10) {
-				label2->Text = "Совет: Хотите получить более подробную информацию о Flimn? Вы можете получить ее, нажав вопрос на панеле инструментов или Справка в найстройках Flimn";
+				label2->Text = "РЎРѕРІРµС‚: РҐРѕС‚РёС‚Рµ РїРѕР»СѓС‡РёС‚СЊ Р±РѕР»РµРµ РїРѕРґСЂРѕР±РЅСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ Flimn? Р’С‹ РјРѕР¶РµС‚Рµ РїРѕР»СѓС‡РёС‚СЊ РµРµ, РЅР°Р¶Р°РІ РІРѕРїСЂРѕСЃ РЅР° РїР°РЅРµР»Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ РёР»Рё РЎРїСЂР°РІРєР° РІ РЅР°Р№СЃС‚СЂРѕР№РєР°С… Flimn";
 			}
 			if (key_advice == 11) {
-				label2->Text = "Совет: В Flimn изменения, сделанные в найстроках, вступят в силу после перезагрузки приложения. Вы можете быстро выйти из приложения или непосредственно перезагрузить Flimn прямо из настроек";
+				label2->Text = "РЎРѕРІРµС‚: Р’ Flimn РёР·РјРµРЅРµРЅРёСЏ, СЃРґРµР»Р°РЅРЅС‹Рµ РІ РЅР°Р№СЃС‚СЂРѕРєР°С…, РІСЃС‚СѓРїСЏС‚ РІ СЃРёР»Сѓ РїРѕСЃР»Рµ РїРµСЂРµР·Р°РіСЂСѓР·РєРё РїСЂРёР»РѕР¶РµРЅРёСЏ. Р’С‹ РјРѕР¶РµС‚Рµ Р±С‹СЃС‚СЂРѕ РІС‹Р№С‚Рё РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ РёР»Рё РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ РїРµСЂРµР·Р°РіСЂСѓР·РёС‚СЊ Flimn РїСЂСЏРјРѕ РёР· РЅР°СЃС‚СЂРѕРµРє";
 			}
 		}
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 	private: System::Windows::Forms::Timer^ timer1;
 	protected:
@@ -74,6 +74,8 @@ namespace Flimncourse {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel1;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Timer^ timer2;
+	private: System::Windows::Forms::Label^ label5;
 
 
 
@@ -82,14 +84,14 @@ namespace Flimncourse {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -103,6 +105,8 @@ namespace Flimncourse {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -133,7 +137,7 @@ namespace Flimncourse {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(192, 35);
 			this->label1->TabIndex = 1;
-			this->label1->Text = L"Загрузка Flimn";
+			this->label1->Text = L"Р—Р°РіСЂСѓР·РєР° Flimn";
 			// 
 			// label2
 			// 
@@ -145,7 +149,7 @@ namespace Flimncourse {
 				static_cast<System::Int32>(static_cast<System::Byte>(96)));
 			this->label2->Location = System::Drawing::Point(559, 7);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(501, 185);
+			this->label2->Size = System::Drawing::Size(491, 185);
 			this->label2->TabIndex = 2;
 			// 
 			// label3
@@ -156,9 +160,9 @@ namespace Flimncourse {
 				static_cast<System::Byte>(204)));
 			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(75)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
 				static_cast<System::Int32>(static_cast<System::Byte>(96)));
-			this->label3->Location = System::Drawing::Point(852, 391);
+			this->label3->Location = System::Drawing::Point(848, 391);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(171, 34);
+			this->label3->Size = System::Drawing::Size(212, 34);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"InnoSoftware 2021";
 			// 
@@ -170,9 +174,9 @@ namespace Flimncourse {
 				static_cast<System::Byte>(204)));
 			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(75)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
 				static_cast<System::Int32>(static_cast<System::Byte>(96)));
-			this->label4->Location = System::Drawing::Point(919, 439);
+			this->label4->Location = System::Drawing::Point(922, 439);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(104, 34);
+			this->label4->Size = System::Drawing::Size(147, 34);
 			this->label4->TabIndex = 4;
 			this->label4->Text = L"Build 0.3.1";
 			// 
@@ -194,6 +198,25 @@ namespace Flimncourse {
 			this->pictureBox1->TabIndex = 6;
 			this->pictureBox1->TabStop = false;
 			// 
+			// timer2
+			// 
+			this->timer2->Enabled = true;
+			this->timer2->Interval = 1000;
+			this->timer2->Tick += gcnew System::EventHandler(this, &Load_screen::timer2_Tick);
+			// 
+			// label5
+			// 
+			this->label5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(212)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+				static_cast<System::Int32>(static_cast<System::Byte>(247)));
+			this->label5->Font = (gcnew System::Drawing::Font(L"Calibri", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(75)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
+				static_cast<System::Int32>(static_cast<System::Byte>(96)));
+			this->label5->Location = System::Drawing::Point(14, 72);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(441, 34);
+			this->label5->TabIndex = 7;
+			// 
 			// Load_screen
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
@@ -202,6 +225,7 @@ namespace Flimncourse {
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->ClientSize = System::Drawing::Size(1049, 763);
 			this->ControlBox = false;
+			this->Controls->Add(this->label5);
 			this->Controls->Add(this->flowLayoutPanel1);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
@@ -232,7 +256,26 @@ namespace Flimncourse {
 	}
 	private: System::Void Load_screen_Load(System::Object^ sender, System::EventArgs^ e) {
 		timer1->Start();
+		timer2->Start();
+	}
+		   int key_loadprocess = 0;
+	private: System::Void timer2_Tick(System::Object^ sender, System::EventArgs^ e) {
+		if (key_loadprocess == 0) {
+			label5->Text = "РџРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј С„Р°Р№Р»С‹";
+		}
+		if (key_loadprocess == 1) {
+			label5->Text = "РћР±СЂР°Р±Р°С‚С‹РІР°РµРј С„Р°Р№Р»С‹ РєРѕРЅС„РёРіСѓСЂР°С†РёРё";
+		}
+		if (key_loadprocess == 2) {
+			label5->Text = "РЎРѕР±РёСЂР°РµРј РїСЂРёР»РѕР¶РµРЅРёРµ";
+		}
+		if (key_loadprocess == 3) {
+			label5->Text = "РџРѕС‡С‚Рё РіРѕС‚РѕРІРѕ! РњС‹ СѓР¶Рµ Р»РµС‚РёРј РїСЂСЏРјРѕ Рє С„РёРЅРёС€Сѓ";
+		}
+		if (key_loadprocess == 4) {
+			label5->Text = "Р’СЃРµ РіРѕС‚РѕРІРѕ! РњС‹ РіРѕС‚РѕРІС‹ Рє Р·Р°РїСѓСЃРєСѓ!";
+		}
+		key_loadprocess++;
 	}
 };
 }
-
