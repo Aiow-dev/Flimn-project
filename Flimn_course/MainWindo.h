@@ -84,8 +84,8 @@ namespace Flimncourse {
 			string get_username;
 			while (getline(username_file, get_username)) {
 				get_username += " ";
-				username_folder->Text += Convert_string_to_String(get_username, username_folder->Text);
 			}
+			username_folder->Text = Convert_string_to_String(get_username, username_folder->Text);
 			fstream check_start;
 			check_start.open("start_checked.txt");
 			string search_state;
@@ -163,6 +163,74 @@ namespace Flimncourse {
 					dark_mode_flag = false;
 				}
 			}
+			fstream file_font;
+			file_font.open("font_file.txt");
+			string name_font;
+			file_font >> name_font;
+			String^ font_set = L"";
+			font_set += Convert_string_to_String(name_font, font_set);
+			fstream size_font_file;
+			size_font_file.open("size_font.txt");
+			int size_check;
+			size_font_file >> size_check;
+			folder_write_note->Font = (gcnew System::Drawing::Font(font_set, size_check, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			/*if (size_check == 5) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 5, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 6) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 6, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 7) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 7, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 8) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 9) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 10) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 11) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 11, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 12) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 13) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 14) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 15) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 20) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 25) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}
+			if (size_check == 30) {
+				folder_write_note->Font = (gcnew System::Drawing::Font(font_set, 30, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(204)));
+			}*/
 		}
 
 	protected:
@@ -435,6 +503,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->button_deletenotes->Size = System::Drawing::Size(39, 29);
 			this->button_deletenotes->TabIndex = 14;
 			this->button_deletenotes->Text = L"🗑";
+			this->button_deletenotes->Click += gcnew System::EventHandler(this, &MainWindo::button_deletenotes_Click);
 			// 
 			// button_hidepanelinstruments
 			// 
@@ -820,7 +889,7 @@ private: System::Void Enter(System::Object^ sender, System::Windows::Forms::KeyE
 		search_icon_Click(sender, e);
 	}
 }
-private: System::Void label14_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void button_deletenotes_Click(System::Object^ sender, System::EventArgs^ e) {
 	listBox_recentnotes->Items->Remove(listBox_recentnotes->SelectedItem);
 }
 private: System::Void button_hidepanelinstruments_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -845,7 +914,6 @@ private: System::Void button_maximizewindow_Click(System::Object^ sender, System
 		   this->Width = 800;
 		   this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 		   this->Location = System::Drawing::Point(175, 175);
-		   //куда сохраниться?
 	   }
 private: System::Void button_settings_Click(System::Object^ sender, System::EventArgs^ e) {
 	Settings_win^ setting_form = gcnew Settings_win();
@@ -857,8 +925,6 @@ private: System::Void setting_button_offpanelinstruments_Click(System::Object^ s
 }
 private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
 	WindowState = FormWindowState::Normal;
-	/*this->Height = 600;
-	this->Width = 1400;*/
 	timer1->Stop();
 	}
 };

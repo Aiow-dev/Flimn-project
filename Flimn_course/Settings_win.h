@@ -60,6 +60,17 @@ namespace Flimncourse {
 					static_cast<System::Int32>(static_cast<System::Byte>(64)));
 				richTextBox2->BackColor= System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 					static_cast<System::Int32>(static_cast<System::Byte>(64)));
+				richTextBox3->BackColor= System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+					static_cast<System::Int32>(static_cast<System::Byte>(64)));
+				richTextBox4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+					static_cast<System::Int32>(static_cast<System::Byte>(64)));
+				label29->BackColor= System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+					static_cast<System::Int32>(static_cast<System::Byte>(64)));
+				label30->BackColor= System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+					static_cast<System::Int32>(static_cast<System::Byte>(64)));
+				label31->BackColor = System::Drawing::Color::DarkSlateBlue;
+				label32->BackColor = System::Drawing::Color::DarkSlateBlue;
+				label33->BackColor = System::Drawing::Color::DarkSlateBlue;
 			}
 		}
 
@@ -107,6 +118,16 @@ namespace Flimncourse {
 	private: System::Windows::Forms::Label^ label26;
 	private: System::Windows::Forms::Label^ label28;
 	private: System::Windows::Forms::Label^ label27;
+	private: System::Windows::Forms::RichTextBox^ richTextBox3;
+	private: System::Windows::Forms::RichTextBox^ richTextBox4;
+	private: System::Windows::Forms::Label^ label29;
+	private: System::Windows::Forms::Label^ label30;
+private: System::Windows::Forms::Label^ label31;
+private: System::Windows::Forms::Label^ label32;
+private: System::Windows::Forms::Label^ label33;
+private: System::Windows::Forms::Label^ label34;
+private: System::Windows::Forms::Label^ label35;
+
 
 	protected:
 
@@ -156,6 +177,15 @@ namespace Flimncourse {
 			this->label24 = (gcnew System::Windows::Forms::Label());
 			this->label25 = (gcnew System::Windows::Forms::Label());
 			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->richTextBox3 = (gcnew System::Windows::Forms::RichTextBox());
+			this->richTextBox4 = (gcnew System::Windows::Forms::RichTextBox());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -283,6 +313,7 @@ namespace Flimncourse {
 			this->label10->Size = System::Drawing::Size(139, 24);
 			this->label10->TabIndex = 8;
 			this->label10->Text = L"Выход из Flimn";
+			this->label10->Click += gcnew System::EventHandler(this, &Settings_win::label10_Click);
 			// 
 			// label9
 			// 
@@ -436,9 +467,9 @@ namespace Flimncourse {
 			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Calibri", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->richTextBox2->ForeColor = System::Drawing::Color::White;
-			this->richTextBox2->Location = System::Drawing::Point(544, 215);
+			this->richTextBox2->Location = System::Drawing::Point(702, 215);
 			this->richTextBox2->Name = L"richTextBox2";
-			this->richTextBox2->Size = System::Drawing::Size(404, 31);
+			this->richTextBox2->Size = System::Drawing::Size(246, 31);
 			this->richTextBox2->TabIndex = 5;
 			this->richTextBox2->Text = L"";
 			this->richTextBox2->Visible = false;
@@ -595,12 +626,144 @@ namespace Flimncourse {
 			this->label26->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->label26->Click += gcnew System::EventHandler(this, &Settings_win::label26_Click);
 			// 
+			// richTextBox3
+			// 
+			this->richTextBox3->BackColor = System::Drawing::Color::Indigo;
+			this->richTextBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->richTextBox3->Font = (gcnew System::Drawing::Font(L"Calibri", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->richTextBox3->ForeColor = System::Drawing::Color::White;
+			this->richTextBox3->Location = System::Drawing::Point(622, 267);
+			this->richTextBox3->Name = L"richTextBox3";
+			this->richTextBox3->Size = System::Drawing::Size(375, 31);
+			this->richTextBox3->TabIndex = 17;
+			this->richTextBox3->Text = L"";
+			this->richTextBox3->Visible = false;
+			this->richTextBox3->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Settings_win::Enter_font);
+			// 
+			// richTextBox4
+			// 
+			this->richTextBox4->BackColor = System::Drawing::Color::Indigo;
+			this->richTextBox4->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->richTextBox4->Font = (gcnew System::Drawing::Font(L"Calibri", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->richTextBox4->ForeColor = System::Drawing::Color::White;
+			this->richTextBox4->Location = System::Drawing::Point(622, 317);
+			this->richTextBox4->Name = L"richTextBox4";
+			this->richTextBox4->Size = System::Drawing::Size(375, 31);
+			this->richTextBox4->TabIndex = 18;
+			this->richTextBox4->Text = L"";
+			this->richTextBox4->Visible = false;
+			this->richTextBox4->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Settings_win::Enter_size_font);
+			// 
+			// label29
+			// 
+			this->label29->BackColor = System::Drawing::Color::Indigo;
+			this->label29->Font = (gcnew System::Drawing::Font(L"Calibri", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label29->ForeColor = System::Drawing::Color::White;
+			this->label29->Location = System::Drawing::Point(281, 317);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(307, 31);
+			this->label29->TabIndex = 19;
+			this->label29->Text = L"Размер шрифта";
+			this->label29->Visible = false;
+			// 
+			// label30
+			// 
+			this->label30->BackColor = System::Drawing::Color::Indigo;
+			this->label30->Font = (gcnew System::Drawing::Font(L"Calibri", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label30->ForeColor = System::Drawing::Color::White;
+			this->label30->Location = System::Drawing::Point(281, 267);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(307, 31);
+			this->label30->TabIndex = 20;
+			this->label30->Text = L"Шрифт";
+			this->label30->Visible = false;
+			// 
+			// label31
+			// 
+			this->label31->BackColor = System::Drawing::Color::Indigo;
+			this->label31->Font = (gcnew System::Drawing::Font(L"Calibri", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label31->ForeColor = System::Drawing::Color::White;
+			this->label31->Location = System::Drawing::Point(361, 544);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(222, 31);
+			this->label31->TabIndex = 21;
+			this->label31->Text = L"Сбросить настройки";
+			this->label31->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->label31->Click += gcnew System::EventHandler(this, &Settings_win::label31_Click);
+			// 
+			// label32
+			// 
+			this->label32->BackColor = System::Drawing::Color::Indigo;
+			this->label32->Font = (gcnew System::Drawing::Font(L"Calibri", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label32->ForeColor = System::Drawing::Color::White;
+			this->label32->Location = System::Drawing::Point(281, 163);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(159, 31);
+			this->label32->TabIndex = 22;
+			this->label32->Text = L"Текущий шрифт:";
+			this->label32->Visible = false;
+			// 
+			// label33
+			// 
+			this->label33->BackColor = System::Drawing::Color::Indigo;
+			this->label33->Font = (gcnew System::Drawing::Font(L"Calibri", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label33->ForeColor = System::Drawing::Color::White;
+			this->label33->Location = System::Drawing::Point(281, 215);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(257, 31);
+			this->label33->TabIndex = 23;
+			this->label33->Text = L"Текущий размер шрифта:";
+			this->label33->Visible = false;
+			// 
+			// label34
+			// 
+			this->label34->AutoSize = true;
+			this->label34->BackColor = System::Drawing::Color::Transparent;
+			this->label34->Font = (gcnew System::Drawing::Font(L"Calibri", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label34->ForeColor = System::Drawing::Color::Black;
+			this->label34->Location = System::Drawing::Point(438, 163);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(150, 24);
+			this->label34->TabIndex = 24;
+			this->label34->Text = L"Текущий шрифт:";
+			this->label34->Visible = false;
+			// 
+			// label35
+			// 
+			this->label35->BackColor = System::Drawing::Color::Transparent;
+			this->label35->Font = (gcnew System::Drawing::Font(L"Calibri", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label35->ForeColor = System::Drawing::Color::Black;
+			this->label35->Location = System::Drawing::Point(544, 215);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(159, 31);
+			this->label35->TabIndex = 25;
+			this->label35->Text = L"Текущий шрифт:";
+			this->label35->Visible = false;
+			// 
 			// Settings_win
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
 			this->ClientSize = System::Drawing::Size(1009, 584);
+			this->Controls->Add(this->label35);
+			this->Controls->Add(this->label34);
+			this->Controls->Add(this->label33);
+			this->Controls->Add(this->label32);
+			this->Controls->Add(this->label31);
+			this->Controls->Add(this->label30);
+			this->Controls->Add(this->label29);
+			this->Controls->Add(this->richTextBox4);
+			this->Controls->Add(this->richTextBox3);
 			this->Controls->Add(this->label26);
 			this->Controls->Add(this->label25);
 			this->Controls->Add(this->label24);
@@ -647,8 +810,11 @@ namespace Flimncourse {
 			   return text2;
 		   }
 	private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
+		richTextBox1->Size = System::Drawing::Size(475, 50);
 		richTextBox1->Visible = true;
 		richTextBox2->Visible = false;
+		richTextBox3->Visible = false;
+		richTextBox4->Visible = false;
 		label15->Visible = false;
 		label14->Visible = false;
 		label17->Visible = false;
@@ -659,10 +825,20 @@ namespace Flimncourse {
 		richTextBox1->Text = "Панель недавних заметок отображает список последних созданных или редактированных заметок. Вы можете отключить или включить данный элемент интерфейса";
 		label21->Visible = true;
 		label22->Visible = true;
+		label29->Visible = false;
+		label30->Visible = false;
+		label31->Visible=true;
+		label32->Visible = false;
+		label33->Visible = false;
+		label34->Visible = false;
+		label35->Visible = false;
 	}
 	private: System::Void label11_Click(System::Object^ sender, System::EventArgs^ e) {
+		richTextBox1->Size = System::Drawing::Size(475, 50);
 		richTextBox1->Visible = true;
 		richTextBox2->Visible = false;
+		richTextBox3->Visible = false;
+		richTextBox4->Visible = false;
 		label15->Visible = false;
 		label14->Visible = false;
 		label17->Visible = false;
@@ -672,6 +848,13 @@ namespace Flimncourse {
 		label20->Visible = false;
 		label21->Visible = false;
 		label22->Visible = false;
+		label29->Visible = false;
+		label30->Visible = false;
+		label31->Visible=true;
+		label32->Visible = false;
+		label33->Visible = false;
+		label34->Visible = false;
+		label35->Visible = false;
 		richTextBox1->Text = "Элемент сворачивания окна позволит полностью свернуть окно приложения. Вы можете включить или отключить данный элемент интерфейса";
 	}
 	private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -679,10 +862,11 @@ namespace Flimncourse {
 		file_user.open("username.txt");
 		string username_t;
 		file_user >> username_t;
+		richTextBox1->Size = System::Drawing::Size(475, 50);
 		richTextBox1->Visible = true;
+		richTextBox2->Visible = false;
 		label17->Visible = false;
 		checkBox1->Visible = false;
-		richTextBox1->Text = "Имя пользователя будет отображаться при входе в Flimn в панели заметок\nВаше имя пользователя: " + Convert_string_to_String(username_t, richTextBox1->Text);
 		label14->Visible = true;
 		label18->Visible = false;
 		label19->Visible = false;
@@ -691,6 +875,16 @@ namespace Flimncourse {
 		label22->Visible = false;
 		label23->Visible = false;
 		label24->Visible = false;
+		label29->Visible = false;
+		label30->Visible = false;
+		label31->Visible=true;
+		label32->Visible = false;
+		label33->Visible = false;
+		label34->Visible = false;
+		label35->Visible = false;
+		richTextBox3->Visible = false;
+		richTextBox4->Visible = false;
+		richTextBox1->Text = "Имя пользователя будет отображаться при входе в Flimn в панели заметок\nВаше имя пользователя: " + Convert_string_to_String(username_t, richTextBox1->Text);
 	}
 	private: System::Void label14_Click(System::Object^ sender, System::EventArgs^ e) {
 		label15->Visible = true;
@@ -700,7 +894,7 @@ namespace Flimncourse {
 		label15->Visible = true;
 		richTextBox2->Visible = true;
 		fstream file_user;
-		file_user.open("username.txt");
+		file_user.open("username.txt",ios_base::out | ios_base::trunc);
 		string new_username_t;
 		new_username_t = Convert_String_to_string(richTextBox2->Text, new_username_t);
 		file_user << new_username_t;
@@ -712,8 +906,11 @@ namespace Flimncourse {
 		}
 	}
 	private: System::Void label16_Click(System::Object^ sender, System::EventArgs^ e) {
+		richTextBox1->Size = System::Drawing::Size(475, 50);
 		richTextBox1->Visible = true;
 		richTextBox2->Visible = false;
+		richTextBox3->Visible = false;
+		richTextBox4->Visible = false;
 		label15->Visible = false;
 		label14->Visible = false;
 		label17->Visible = false;
@@ -725,11 +922,21 @@ namespace Flimncourse {
 		label22->Visible = false;
 		label23->Visible = false;
 		label24->Visible = false;
+		label29->Visible = false;
+		label30->Visible = false;
+		label31->Visible=true;
+		label32->Visible = false;
+		label33->Visible = false;
+		label34->Visible = false;
+		label35->Visible = false;
 		richTextBox1->Text = "Версия Flimn: build 1.1.0";
 	}
 	private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+		richTextBox1->Size = System::Drawing::Size(475, 50);
 		richTextBox1->Visible = true;
 		richTextBox2->Visible = false;
+		richTextBox3->Visible = false;
+		richTextBox4->Visible = false;
 		label15->Visible = false;
 		label14->Visible = false;
 		richTextBox1->Text = "Поиск позволяет искать данные в заметках. Вы можете включить или отключить его, изменить цвет и многое другое";
@@ -745,6 +952,13 @@ namespace Flimncourse {
 		label22->Visible = false;
 		label23->Visible = false;
 		label24->Visible = false;
+		label29->Visible = false;
+		label30->Visible = false;
+		label31->Visible=true;
+		label32->Visible = false;
+		label33->Visible = false;
+		label34->Visible = false;
+		label35->Visible = false;
 	}
 	private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 		string index_search = "true";
@@ -767,8 +981,11 @@ namespace Flimncourse {
 		MessageBox::Show("Сохранено!");
 	}
 	private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+		richTextBox1->Size = System::Drawing::Size(475, 50);
 		richTextBox1->Visible = true;
 		richTextBox2->Visible = false;
+		richTextBox3->Visible = false;
+		richTextBox4->Visible = false;
 		label15->Visible = false;
 		label14->Visible = false;
 		label17->Visible = false;
@@ -783,6 +1000,13 @@ namespace Flimncourse {
 		label22->Visible = false;
 		label23->Visible = false;
 		label24->Visible = false;
+		label29->Visible = false;
+		label30->Visible = false;
+		label31->Visible=true;
+		label32->Visible = false;
+		label33->Visible = false;
+		label34->Visible = false;
+		label35->Visible = false;
 	}
 	private: System::Void label19_Click(System::Object^ sender, System::EventArgs^ e) {
 		fstream panel_instruments;
@@ -813,8 +1037,11 @@ namespace Flimncourse {
 		MessageBox::Show("Сохранено!");
 	}
 	private: System::Void label12_Click(System::Object^ sender, System::EventArgs^ e) {
+		richTextBox1->Size = System::Drawing::Size(475, 50);
 		richTextBox1->Visible = true;
 		richTextBox2->Visible = false;
+		richTextBox3->Visible = false;
+		richTextBox4->Visible = false;
 		label15->Visible = false;
 		label14->Visible = false;
 		label17->Visible = false;
@@ -826,11 +1053,21 @@ namespace Flimncourse {
 		label22->Visible = false;
 		label23->Visible = false;
 		label24->Visible = false;
+		label29->Visible = false;
+		label30->Visible = false;
+		label31->Visible=true;
+		label32->Visible = false;
+		label33->Visible = false;
+		label34->Visible = false;
+		label35->Visible = false;
 		richTextBox1->Text = "Элемент сворачивания и разворачивания окна расположен в правой верхней части интерфейса. Данный элемент позволяет как уменьшить размер окна, сделав одинарный клик, так и увеличить, сделав двойной. Вы можете изменить параметры увеличения и уменьшения окна Flimn";
 	}
 	private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+		richTextBox1->Size = System::Drawing::Size(475, 50);
 		richTextBox1->Visible = true;
 		richTextBox2->Visible = false;
+		richTextBox3->Visible = false;
+		richTextBox4->Visible = false;
 		label15->Visible = false;
 		label14->Visible = false;
 		label17->Visible = false;
@@ -842,6 +1079,13 @@ namespace Flimncourse {
 		label22->Visible = false;
 		label23->Visible = true;
 		label24->Visible = true;
+		label29->Visible = false;
+		label30->Visible = false;
+		label31->Visible=true;
+		label32->Visible = false;
+		label33->Visible = false;
+		label34->Visible = false;
+		label35->Visible = false;
 		richTextBox1->Text = "Цветовая схема позволяет изменить цвет по умолчанию в Flimn. Например, вы можете по умолчанию поставить ночной режим в приложении";
 	}
 	private: System::Void label23_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -866,8 +1110,11 @@ private: System::Void label26_Click(System::Object^ sender, System::EventArgs^ e
 	Application::Restart();
 }
 private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
+	richTextBox1->Size = System::Drawing::Size(475, 50);
 	richTextBox1->Visible = true;
 	richTextBox2->Visible = false;
+	richTextBox3->Visible = false;
+	richTextBox4->Visible = false;
 	label15->Visible = false;
 	label14->Visible = false;
 	label17->Visible = false;
@@ -879,11 +1126,20 @@ private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e)
 	label22->Visible = false;
 	label23->Visible = false;
 	label24->Visible = false;
+	label29->Visible = false;
+	label30->Visible = false;
+	label31->Visible=true;
+	label32->Visible = false;
+	label33->Visible = false;
+	label34->Visible = false;
+	label35->Visible = false;
 	richTextBox1->Text = "Панель недавних заметок расположена в левой части экрана. Панель отображает заметки, созданные в относительно недавние промежутки времени. Вы можете включить или отключить данную панель";
 }
 private: System::Void label28_Click(System::Object^ sender, System::EventArgs^ e) {
 	richTextBox1->Visible = true;
 	richTextBox2->Visible = false;
+	richTextBox3->Visible = false;
+	richTextBox4->Visible = false;
 	label15->Visible = false;
 	label14->Visible = false;
 	label17->Visible = false;
@@ -895,12 +1151,22 @@ private: System::Void label28_Click(System::Object^ sender, System::EventArgs^ e
 	label22->Visible = false;
 	label23->Visible = false;
 	label24->Visible = false;
+	label29->Visible = false;
+	label30->Visible = false;
+	label31->Visible=true;
+	label32->Visible = false;
+	label33->Visible = false;
+	label34->Visible = false;
+	label35->Visible = false;
 	richTextBox1->Size = System::Drawing::Size(475, 500);
 	richTextBox1->Text = "Политика конфиденциальности Flimn. Flimn обеспечивает защиту конфиденциальности ваших данных от сторонних вмешательств. Только Вы можете получить доступ к Вашим заметкам. В случае, если приложение было повреждено пользователем или злоумышленниками (в том числе, злоумыленники получили доступ к файлам компьютера пользователя), InnoSoftware не несет никакой ответственности за утечку или утерю пользовательских данных. Будьте внимательны, и не передавайте файлы заметок или конфигурации приложения Flimn. Также, во избежание поломки приложения, рекомендуется не изменять файлы Flimn, в частности, файлы конфигурации. Используя Flimn, вы соглашаетесь со всеми условиями настоящей политики конфиденциальности Flimn";
 }
 private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e) {
+	richTextBox1->Size = System::Drawing::Size(475, 50);
 	richTextBox1->Visible = true;
 	richTextBox2->Visible = false;
+	richTextBox3->Visible = false;
+	richTextBox4->Visible = false;
 	label15->Visible = false;
 	label14->Visible = false;
 	label17->Visible = false;
@@ -912,13 +1178,20 @@ private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e
 	label22->Visible = false;
 	label23->Visible = false;
 	label24->Visible = false;
-	/*String^ stroka = L"Times New Roman";*/
-	this->label28->Font = (gcnew System::Drawing::Font(L"Calibri", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-		static_cast<System::Byte>(204)));
+	label29->Visible = false;
+	label30->Visible = false;
+	label31->Visible=true;
+	label32->Visible = false;
+	label33->Visible = false;
+	label34->Visible = false;
+	label35->Visible = false;
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
+	richTextBox1->Size = System::Drawing::Size(475, 50);
 	richTextBox1->Visible = true;
 	richTextBox2->Visible = false;
+	richTextBox3->Visible = true;
+	richTextBox4->Visible = true;
 	label15->Visible = false;
 	label14->Visible = false;
 	label17->Visible = false;
@@ -930,14 +1203,60 @@ private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e)
 	label22->Visible = false;
 	label23->Visible = false;
 	label24->Visible = false;
+	label29->Visible = true;
+	label30->Visible = true;
+	label32->Visible = true;
+	label33->Visible = true;
+	label34->Visible = true;
+	label35->Visible = true;
+	fstream theme_file;
+	theme_file.open("font_file.txt");
+	string state_theme;
+	theme_file >> state_theme;
+	fstream file_size;
+	file_size.open("size_font.txt");
+	string size_font;
+	file_size >> size_font;
 	richTextBox1->Text = "Поле заметок - это основной элемент приложения. Данный элемент отображает и записывает пользовательские заметки. Вы можете изменить шрифт, отображаемый данныи полем";
-	String^ font_foldernote = L"Times New Roman";
+	label34->Text = Convert_string_to_String(state_theme,label34->Text);
+	label35->Text = Convert_string_to_String(size_font, label35->Text);
+
+	/*String^ font_foldernote = L"Times New Roman";
 	this->label28->Font = (gcnew System::Drawing::Font(font_foldernote, 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-		static_cast<System::Byte>(204)));
+		static_cast<System::Byte>(204)));*/
 }
+	private: System::Void save_font_folderwritenote(System::Object^ sender, System::EventArgs^ e) {
+		fstream theme_file;
+		theme_file.open("font_file.txt",ios_base::out | ios_base::trunc);
+		string state_theme;
+		state_theme = Convert_String_to_string(richTextBox3->Text, state_theme);
+		theme_file << state_theme;
+		MessageBox::Show("Сохранено!");
+	}
+		   private: System::Void save_size_font_folderwritenote(System::Object^ sender, System::EventArgs^ e) {
+			   fstream theme_file;
+			   theme_file.open("size_font.txt", ios_base::out | ios_base::trunc);
+			   string state_theme;
+			   state_theme = Convert_String_to_string(richTextBox4->Text, state_theme);
+			   theme_file << state_theme;
+			   MessageBox::Show("Сохранено!");
+		   }
+		   private: System::Void Enter_font(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+			   if (e->KeyCode == Keys(13)) {
+				   save_font_folderwritenote(sender, e);
+			   }
+		   }
+				  private: System::Void Enter_size_font(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+					  if (e->KeyCode == Keys(13)) {
+						  save_size_font_folderwritenote(sender, e);
+					  }
+				  }
 private: System::Void label27_Click(System::Object^ sender, System::EventArgs^ e) {
+	richTextBox1->Size = System::Drawing::Size(475, 50);
 	richTextBox1->Visible = true;
 	richTextBox2->Visible = false;
+	richTextBox3->Visible = false;
+	richTextBox4->Visible = false;
 	label15->Visible = false;
 	label14->Visible = false;
 	label17->Visible = false;
@@ -949,6 +1268,61 @@ private: System::Void label27_Click(System::Object^ sender, System::EventArgs^ e
 	label22->Visible = false;
 	label23->Visible = false;
 	label24->Visible = false;
+	label29->Visible = false;
+	label30->Visible = false;
+	label31->Visible=true;
+	label32->Visible = false;
+	label33->Visible = false;
+	label34->Visible = false;
+	label35->Visible = false;
+}
+private: System::Void label31_Click(System::Object^ sender, System::EventArgs^ e) {
+	MessageBox::Show("Внимание! Изменения, осуществленные в настройках, вернутся к значениям по умолчанию");
+	fstream theme_file;
+	theme_file.open("state_theme.txt");
+	string state_theme = "false";
+	theme_file << state_theme;
+	fstream file_font;
+	file_font.open("font_file.txt", ios_base::out | ios_base::trunc);
+	string font = "Calibri";
+	file_font << font;
+	fstream file_font_size;
+	file_font_size.open("size_font.txt", ios_base::out | ios_base::trunc);
+	int size = 10;
+	file_font_size << size;
+	fstream recent_notes;
+	recent_notes.open("panel_instruments.txt");
+	string state_panel = "true";
+	recent_notes << state_panel;
+	string index_search = "true";
+	fstream file_start_checked;
+	file_start_checked.open("start_checked.txt");
+	file_start_checked << index_search;
+}
+private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e) {
+	richTextBox1->Size = System::Drawing::Size(475, 50);
+	richTextBox1->Visible = true;
+	richTextBox2->Visible = false;
+	richTextBox3->Visible = false;
+	richTextBox4->Visible = false;
+	label15->Visible = false;
+	label14->Visible = false;
+	label17->Visible = false;
+	checkBox1->Visible = false;
+	label18->Visible = false;
+	label19->Visible = false;
+	label20->Visible = false;
+	label21->Visible = false;
+	label22->Visible = false;
+	label23->Visible = false;
+	label24->Visible = false;
+	label29->Visible = false;
+	label30->Visible = false;
+	label31->Visible=true;
+	label32->Visible = false;
+	label33->Visible = false;
+	label34->Visible = false;
+	label35->Visible = false;
 }
 };
 }
